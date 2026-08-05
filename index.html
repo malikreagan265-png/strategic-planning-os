@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Planning OS — Strategy That Stays Alive After the Offsite</title>
+  <meta name="description" content="Strategy that stays alive after the offsite. Plan generator, quarterly priorities cascade, strategy review tracker, and decisions log. $39/month." />
+  <meta name="keywords" content="strategic planning template, annual strategic plan, quarterly priorities, strategy execution, strategic plan generator, business strategy template, startup strategic plan, annual planning process" />
+  <link rel="canonical" href="https://malikreagan.gumroad.com/l/strategic-planning-os" />
+  <meta property="og:title" content="Strategic Planning OS — Four Tools for Strategy That Stays Alive" />
+  <meta property="og:description" content="Plan generator, quarterly priorities cascade, strategy review, and decisions log. $39/month." />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Strategic Planning OS","applicationCategory":"BusinessApplication","description":"Strategic planning OS — generate annual plans, cascade into quarterly priorities, review execution monthly, and log strategic decisions. Updated monthly.","offers":{"@type":"Offer","price":"39.00","priceCurrency":"USD","priceSpecification":{"@type":"RecurringPaymentSpecification","billingPeriod":"P1M"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"24"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --void:#09090B;--void2:#111113;--void3:#18181B;
+      --gold:#F59E0B;--gold2:#FCD34D;--gold-dim:#F59E0B14;--gold-soft:#F59E0B28;
+      --silver:#E8E8EA;--silver2:#C0C0C8;--silver3:#88889A;--silver4:#44445A;
+      --rule:#1E1E24;--rule2:#242430;
+      --green:#10B981;--green-dim:#10B98114;--green-soft:#10B98128;
+      --red:#EF4444;--red-dim:#EF444414;--red-soft:#EF444428;
+      --sand:#FAFAF7;--sand2:#F2F2EE;--rule-l:#E4E4DC;
+      --ink:#1A1A14;--ink2:#3A3A30;--ink3:#6A6A5C;--ink4:#9A9A8C;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--sand);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .container{max-width:880px;margin:0 auto;padding:0 36px}
+    nav{background:var(--void);border-bottom:2px solid var(--gold);padding:0 36px;height:56px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-0.3px}
+    .nav-logo span{color:var(--gold2)}
+    .nav-cta{background:var(--gold);color:var(--void);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:9px 20px;text-decoration:none;font-weight:700;transition:all 0.15s;}
+    .nav-cta:hover{background:var(--gold2);transform:translateY(-1px)}
+    .hero{background:var(--void);padding:88px 0 72px;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(245,158,11,0.07) 0%,transparent 60%);}
+    .hero-inner{position:relative}
+    .hero-kicker{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--silver4);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+    .hero-kicker::before{content:'🎯';font-size:14px}
+    .hero-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(38px,5.5vw,72px);font-weight:700;line-height:1.0;color:#fff;margin-bottom:24px;letter-spacing:-1px;}
+    .hero-h1 em{font-style:normal;color:var(--gold2);display:block;}
+    .hero-sub{font-size:16px;color:var(--silver3);max-width:540px;line-height:1.8;margin-bottom:40px;font-weight:300;}
+    .hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:48px;}
+    .btn-primary{background:var(--gold);color:var(--void);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:16px 40px;text-decoration:none;font-weight:700;transition:all 0.2s;display:inline-block;}
+    .btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 40px rgba(245,158,11,0.25)}
+    .btn-ghost{color:var(--silver4);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-decoration:none;border-bottom:1px solid var(--rule2);padding-bottom:2px;text-transform:uppercase;transition:all 0.15s;}
+    .btn-ghost:hover{color:var(--silver2)}
+    /* plan preview */
+    .plan-preview{background:var(--void2);border:1px solid var(--rule2);overflow:hidden;max-width:560px;}
+    .pp-banner{background:var(--gold);padding:3px 0;text-align:center;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--void);font-weight:700}
+    .pp-head{background:var(--void3);padding:14px 18px;border-bottom:1px solid var(--rule2)}
+    .pp-company{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:5px}
+    .pp-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:3px}
+    .pp-vision{font-size:12px;color:var(--gold2);font-style:italic;border-left:2px solid var(--gold);padding-left:10px;margin-top:8px}
+    .pp-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule2)}
+    .ppp{background:var(--void3);padding:8px 10px}
+    .ppp-num{font-family:'Space Mono',monospace;font-size:8px;color:var(--gold2);margin-bottom:2px}
+    .ppp-title{font-size:11px;font-weight:700;color:#fff}
+    .pp-goal{padding:7px 18px;border-bottom:1px solid var(--rule2);display:flex;gap:8px;font-size:12px;align-items:flex-start}
+    .ppg-num{font-family:'Space Mono',monospace;font-size:9px;color:var(--gold2);flex-shrink:0;margin-top:1px}
+    .ppg-title{color:var(--silver);font-weight:600}
+    .ppg-metric{font-family:'Space Mono',monospace;font-size:8px;color:var(--green);margin-top:2px}
+    /* sections */
+    .section{padding:88px 0;border-top:1px solid var(--rule-l);}
+    .eyebrow{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4.5vw,52px);font-weight:700;line-height:1.0;margin-bottom:14px;letter-spacing:-0.5px;}
+    .section-title em{font-style:normal;color:var(--gold);}
+    .section-sub{font-size:15px;color:var(--ink3);max-width:540px;line-height:1.8;font-weight:300;margin-bottom:52px;}
+    /* tool tabs */
+    .tool-list{display:flex;flex-direction:column;gap:2px;margin-top:48px}
+    .tool-row{display:grid;grid-template-columns:56px 1fr;background:#fff;border:1px solid var(--rule-l);}
+    .tool-num{display:flex;align-items:center;justify-content:center;background:var(--void);color:var(--gold2);font-family:'Space Mono',monospace;font-size:16px;font-weight:700;border-right:1px solid var(--rule2);}
+    .tool-body{padding:22px 26px}
+    .tool-tag{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .tool-name{font-size:20px;font-weight:700;color:var(--void);margin-bottom:8px;letter-spacing:-0.3px}
+    .tool-desc{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:12px;font-weight:300}
+    .tool-chips{display:flex;gap:8px;flex-wrap:wrap}
+    .tool-chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 10px;border:1px solid var(--rule-l);color:var(--ink4);text-transform:uppercase;letter-spacing:1px}
+    /* insight */
+    .insight-box{background:var(--void);border:1px solid var(--rule2);border-left:4px solid var(--gold);padding:28px 32px;margin-top:48px}
+    .ib-label{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px}
+    .ib-title{font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin-bottom:10px}
+    .ib-text{font-size:14px;color:var(--silver3);line-height:1.8;font-weight:300}
+    /* testimonials */
+    .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:48px}
+    .test-card{background:#fff;border:1px solid var(--rule-l);padding:26px;border-top:3px solid var(--gold)}
+    .stars{color:var(--gold);font-size:12px;letter-spacing:3px;margin-bottom:12px}
+    .test-card p{font-size:14px;font-style:italic;color:var(--ink2);line-height:1.8;margin-bottom:14px}
+    .test-attr{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--ink4);text-transform:uppercase}
+    /* pricing */
+    .pricing-card{max-width:520px;margin:48px auto 0;background:#fff;border:2px solid var(--void);overflow:hidden}
+    .pricing-top{background:var(--void);padding:40px 44px;text-align:center}
+    .pricing-kicker{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--silver4);margin-bottom:14px}
+    .price{font-family:'Space Grotesk',sans-serif;font-size:80px;font-weight:700;color:var(--gold2);line-height:1;letter-spacing:-2px}
+    .price-period{font-family:'Space Mono',monospace;font-size:14px;color:var(--silver4);margin-left:4px}
+    .price-sub{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver4);margin-top:8px}
+    .pricing-body{padding:36px 44px}
+    .feature-list{list-style:none;margin-bottom:32px}
+    .feature-list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--rule-l);font-size:13px;color:var(--ink2);line-height:1.5}
+    .feature-list li:last-child{border-bottom:none}
+    .check{color:var(--gold);flex-shrink:0;padding-top:2px}
+    .btn-purchase{display:block;width:100%;background:var(--gold);color:var(--void);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:18px;text-align:center;text-decoration:none;font-weight:700;transition:all 0.15s}
+    .btn-purchase:hover{background:var(--gold2);transform:translateY(-1px)}
+    .guarantee{text-align:center;margin-top:14px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--ink4);text-transform:uppercase}
+    /* faq */
+    .faq-list{margin-top:48px;border:1px solid var(--rule-l);background:#fff}
+    .faq-item{border-bottom:1px solid var(--rule-l)}.faq-item:last-child{border-bottom:none}
+    .faq-q{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:22px 28px;cursor:pointer;font-size:17px;font-weight:700;color:var(--void);line-height:1.3;background:none;border:none;width:100%;text-align:left;transition:background 0.15s}
+    .faq-q:hover{background:var(--sand2)}
+    .faq-toggle{color:var(--gold);font-size:22px;font-weight:300;line-height:1;flex-shrink:0;font-family:sans-serif}
+    .faq-a{display:none;padding:0 28px 22px;font-size:14px;color:var(--ink3);line-height:1.8;font-weight:300}
+    /* cta */
+    .cta-section{background:var(--void);padding:96px 0;border-top:3px solid var(--gold);text-align:center}
+    .cta-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,5vw,58px);font-weight:700;color:#fff;line-height:1.0;margin-bottom:16px;letter-spacing:-0.5px}
+    .cta-section h2 em{font-style:normal;color:var(--gold2)}
+    .cta-section p{font-size:15px;color:var(--silver4);margin-bottom:36px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.8;font-weight:300}
+    .cta-note{margin-top:16px;font-family:'Space Mono',monospace;font-size:9px;color:var(--silver4);letter-spacing:2px;text-transform:uppercase}
+    footer{padding:28px 36px;border-top:1px solid var(--rule-l);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;background:var(--sand2)}
+    .footer-logo{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--ink3)}
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{font-family:'Space Mono',monospace;font-size:9px;color:var(--ink4);text-decoration:none;letter-spacing:1px;text-transform:uppercase}
+    .footer-links a:hover{color:var(--ink)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .hero-inner>*{animation:fadeUp 0.45s ease both;opacity:0}
+    .hero-kicker{animation-delay:0.05s}.hero-h1{animation-delay:0.1s}.hero-sub{animation-delay:0.18s}.hero-actions{animation-delay:0.24s}.plan-preview{animation-delay:0.3s}
+    @media(max-width:600px){.container{padding:0 20px}.section{padding:60px 0}nav,footer{padding:14px 20px}.pricing-top,.pricing-body{padding:28px 24px}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">Strategic Planning <span>OS</span></a>
+  <a href="https://malikreagan.gumroad.com/l/strategic-planning-os" class="nav-cta">Get It — $39/mo</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-kicker">Executive Intelligence Suite · Strategy Tools</div>
+      <h1 class="hero-h1">Strategy that stays alive<em>after the offsite.</em></h1>
+      <p class="hero-sub">Strategic plan generator with pillars, goals, risk register, and not-doing list. Quarterly priorities cascade. Monthly strategy review. Decisions log that prevents re-litigating what was already decided.</p>
+      <div class="hero-actions">
+        <a href="https://malikreagan.gumroad.com/l/strategic-planning-os" class="btn-primary">Get Strategic Planning OS — $39/mo</a>
+        <a href="#tools" class="btn-ghost">See all four tools ↓</a>
+      </div>
+      <div class="plan-preview">
+        <div class="pp-banner">Vertex Technologies · 1 Year Strategic Plan · 2025</div>
+        <div class="pp-head">
+          <div class="pp-company">Vertex Technologies</div>
+          <div class="pp-title">2025 Strategic Plan</div>
+          <div class="pp-vision">"The operating system for HR compliance in the English-speaking mid-market."</div>
+        </div>
+        <div class="pp-pillars">
+          <div class="ppp"><div class="ppp-num">01</div><div class="ppp-title">Capital & Growth</div></div>
+          <div class="ppp"><div class="ppp-num">02</div><div class="ppp-title">Market Expansion</div></div>
+          <div class="ppp"><div class="ppp-num">03</div><div class="ppp-title">Operational Excellence</div></div>
+        </div>
+        <div class="pp-goal"><div class="ppg-num">1</div><div><div class="ppg-title">Raise Series B by Q2</div><div class="ppg-metric">✓ Term sheet signed by 30 April</div></div></div>
+        <div class="pp-goal" style="border-bottom:none"><div class="ppg-num">2</div><div><div class="ppg-title">Launch US market</div><div class="ppg-metric">✓ £500K ARR from US customers by Dec</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">The core problem</p>
+    <h2 class="section-title">Strategic plans fail at<em>the same point every time.</em></h2>
+    <div class="insight-box">
+      <div class="ib-label">Six weeks after the offsite</div>
+      <div class="ib-title">The planning session goes well. Then the document goes into a shared folder. Then the day-to-day takes over.</div>
+      <div class="ib-text">By Q2 the team is executing on instinct. By Q3 nobody can remember what the top three priorities were without opening a 40-slide deck. By Q4 there's a retrospective about why the year didn't go to plan — and then another offsite to produce another strategy document. The problem isn't the planning. It's that strategy lives in a document instead of in a system.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="container">
+    <p class="eyebrow">Four tools</p>
+    <h2 class="section-title">Plan. Cascade. Review. Log.<em>One OS.</em></h2>
+    <p class="section-sub">Each tool handles a different part of the strategy lifecycle — together they replace the annual slide deck with a system the whole leadership team actually uses.</p>
+    <div class="tool-list">
+      <div class="tool-row"><div class="tool-num">01</div><div class="tool-body"><div class="tool-tag">The Plan</div><div class="tool-name">Strategic Plan Generator</div><div class="tool-desc">Enter the company context, current state, and strategic direction. Get a complete strategic plan in under 3 minutes — with vision statement, three strategic pillars, 4–5 annual goals with measurable metrics, five plan sections, a risk register with mitigations, and a Not Doing List that defines scope. Push to the Quarterly Priorities builder with one click.</div><div class="tool-chips"><span class="tool-chip">3 horizons</span><span class="tool-chip">5 stages</span><span class="tool-chip">Strategic pillars</span><span class="tool-chip">Risk register</span><span class="tool-chip">Not doing list</span></div></div></div>
+      <div class="tool-row"><div class="tool-num">02</div><div class="tool-body"><div class="tool-tag">The Cascade</div><div class="tool-name">Quarterly Priorities Builder</div><div class="tool-desc">Cascade the annual strategy into 90-day priority sprints. Each quarter gets a theme (the one thing this quarter is about) and 3–5 priorities — each with why it matters this quarter specifically and how success is measured by end of quarter. Priorities flow logically: Q1 sets up Q2, Q2 sets up Q3. Generate any quarter or all four at once.</div><div class="tool-chips"><span class="tool-chip">Quarter themes</span><span class="tool-chip">3–5 priorities</span><span class="tool-chip">Measurable outcomes</span><span class="tool-chip">Logical sequencing</span></div></div></div>
+      <div class="tool-row"><div class="tool-num">03</div><div class="tool-body"><div class="tool-tag">The Review</div><div class="tool-name">Strategy Review</div><div class="tool-desc">Monthly or quarterly strategy review in 60 seconds. Paste the priorities and current status. Get per-priority On Track/At Risk/Off Track assessment with specific actions (who does what by when), the single biggest execution risk, and the most important next action. The meeting becomes a decision session, not a status update.</div><div class="tool-chips"><span class="tool-chip">Per-priority status</span><span class="tool-chip">Specific actions</span><span class="tool-chip">Biggest risk</span><span class="tool-chip">Next action</span></div></div></div>
+      <div class="tool-row"><div class="tool-num">04</div><div class="tool-body"><div class="tool-tag">The Memory</div><div class="tool-name">Strategic Decisions Log</div><div class="tool-desc">Every significant decision — what was decided, why, who decided it, and when. Four decision types: Strategic, Operational, Financial, People. The institutional memory that prevents re-litigating decisions that were already made. When a board member questions a direction, or a new hire challenges a positioning choice, or the leadership team can't remember why they made a particular call — the log is the answer.</div><div class="tool-chips"><span class="tool-chip">4 decision types</span><span class="tool-chip">Owner tracking</span><span class="tool-chip">Date stamped</span><span class="tool-chip">Pre-loaded samples</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">What people say</p>
+    <h2 class="section-title">Strategy that<em>actually gets executed.</em></h2>
+    <div class="test-grid">
+      <div class="test-card"><div class="stars">★★★★★</div><p>"We've done strategic planning the same way for six years — offsite in January, forgotten by April. The quarterly priorities cascade is the key — every 90 days we know exactly what the three to five things are. The strategy feels like something we're executing rather than something we produced."</p><p class="test-attr">CEO · Growth-stage SaaS</p></div>
+      <div class="test-card"><div class="stars">★★★★★</div><p>"The decisions log is the most underrated feature. Two board members were questioning a positioning decision from January. I opened the log, showed them the decision and rationale. Five-minute conversation instead of a two-hour board debate. That feature alone is worth the subscription."</p><p class="test-attr">Founder · Series B</p></div>
+      <div class="test-card"><div class="stars">★★★★★</div><p>"The strategy review changed our leadership meetings. Before, 90 minutes on status updates, no clear actions. Now the AI does the assessment in 60 seconds before the meeting and we spend the time on decisions. Half the length, twice as productive."</p><p class="test-attr">COO · Scale-up</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <p class="eyebrow" style="text-align:center">Pricing</p>
+    <h2 class="section-title" style="text-align:center">Everything included.<em>$39/month.</em></h2>
+    <div class="pricing-card">
+      <div class="pricing-top">
+        <div class="pricing-kicker">Strategic Planning OS</div>
+        <div class="price">$39<span class="price-period">/mo</span></div>
+        <div class="price-sub">Cancel anytime · No contracts · No lock-in</div>
+      </div>
+      <div class="pricing-body">
+        <ul class="feature-list">
+          <li><span class="check">✦</span>Strategic plan generator — 3 horizons, 5 stages, pillars, goals with metrics, risk register, not-doing list</li>
+          <li><span class="check">✦</span>Quarterly priorities builder — themes, 3–5 priorities per quarter, measurable outcomes</li>
+          <li><span class="check">✦</span>Strategy review — On Track/At Risk/Off Track per priority, biggest risk, next action</li>
+          <li><span class="check">✦</span>Decisions log — 4 decision types, owner tracking, institutional memory</li>
+          <li><span class="check">✦</span>Monthly updates — new frameworks, execution features, planning templates</li>
+          <li><span class="check">✦</span>Works in any browser — no install, no login</li>
+        </ul>
+        <a href="https://malikreagan.gumroad.com/l/strategic-planning-os" class="btn-purchase">Get Strategic Planning OS — $39/month</a>
+        <p class="guarantee">Cancel anytime · 7-day money-back guarantee</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="section-title" style="margin-bottom:0">Questions.</h2>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Strategy that stays alive<em>after the offsite.</em></h2>
+    <p>Plan, cascade, review, and log. The OS that keeps strategy alive from January through December.</p>
+    <a href="https://malikreagan.gumroad.com/l/strategic-planning-os" class="btn-primary">Get Strategic Planning OS — $39/month</a>
+    <p class="cta-note">Cancel anytime · 7-day guarantee · Instant access</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">🎯 Strategic Planning OS</div>
+  <div class="footer-links"><a href="#">Privacy</a><a href="#">Refund Policy</a><a href="mailto:hello@malikreagan.com">Contact</a></div>
+</footer>
+
+<script>
+const FAQS=[
+  {q:"What planning horizons does the generator support?",a:"1 Year, 3 Year, and 5 Year. The plan is calibrated for the horizon — a 1-year plan is more operationally specific with quarterly milestones implied; a 3-year plan focuses on strategic positioning and capability building; a 5-year plan is more visionary with broader strategic bets. The company stage also affects the output — an Early stage plan reads differently from an Enterprise plan in scope, ambition, and specific priorities."},
+  {q:"What is the 'Not Doing List' and why does it matter?",a:"The Not Doing List is 3–4 things explicitly NOT in scope for the planning horizon — markets you're not entering, product areas you're not building, customer segments you're not serving. What you choose not to do is as strategically important as what you do, because it's what enables focus. Most strategy documents define what the company will do; almost none define what it won't. The Not Doing List closes that gap and prevents scope creep from diluting execution."},
+  {q:"How does the Quarterly Priorities Builder connect to the annual plan?",a:"You paste the annual strategy or push it from the plan generator with one click. The builder reads the annual goals and cascades them into specific 90-day priorities — each quarter gets a theme (the one thing the quarter is about) and 3–5 priorities that advance the annual goals in a logical sequence. Q1 sets up Q2, Q2 sets up Q3. The measurable outcome for each priority tells you exactly what 'done' looks like by the end of the quarter."},
+  {q:"What happens if I cancel?",a:"You keep access until the end of your billing period. After that, the tool stops receiving monthly updates but continues to work — all plans, decisions, and reviews remain intact. Cancel anytime from your Gumroad account."},
+  {q:"How is this different from OKR software?",a:"OKR software tracks objective and key result progress — it assumes the OKRs are already set. The Strategic Planning OS starts earlier: it generates the strategy, cascades it into quarterly priorities (which can be OKRs or any other format), reviews execution against those priorities, and captures the decisions that shape direction. It's a complete strategic management system rather than a tracking tool. The Decisions Log is the feature that has no equivalent in OKR software."}
+];
+const faqList=document.getElementById('faqList');
+FAQS.forEach((f,i)=>{
+  const div=document.createElement('div');div.className='faq-item';
+  div.innerHTML=`<button class="faq-q" onclick="toggleFaq(${i})">${f.q}<span class="faq-toggle" id="ftog${i}">+</span></button><div class="faq-a" id="fans${i}">${f.a}</div>`;
+  faqList.appendChild(div);
+});
+function toggleFaq(i){
+  const ans=document.getElementById('fans'+i);const tog=document.getElementById('ftog'+i);
+  const open=ans.style.display==='block';
+  document.querySelectorAll('.faq-a').forEach(a=>a.style.display='none');
+  document.querySelectorAll('.faq-toggle').forEach(t=>t.textContent='+');
+  if(!open){ans.style.display='block';tog.textContent='−';}
+}
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.07});
+document.querySelectorAll('.section').forEach(s=>{s.style.opacity='0';s.style.transform='translateY(18px)';s.style.transition='opacity 0.5s ease, transform 0.5s ease';obs.observe(s);});
+</script>
+</body>
+</html>
